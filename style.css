@@ -6,6 +6,7 @@
 }
 
 body {
+     font-family: 'Noto Sans Sinhala', Arial, sans-serif;
      background-color: #ffebee;
      display: flex;
      justify-content: center;
@@ -32,27 +33,27 @@ body {
      opacity: 0.5;
 }
 
-.blur-circle:nth-child(1) img{
+.blur-circle:nth-child(1) img {
      top: 10%;
      left: 5%;
+     scale: 1.5;
 }
 
-.blur-circle:nth-child(2) img{
+.blur-circle:nth-child(2) img {
      bottom: 5%;
      left: 15%;
 }
 
-.blur-circle:nth-child(3) img{
+.blur-circle:nth-child(3) img {
      top: 60%;
      right: 5%;
+     scale: 2;
 }
 
-.blur-circle:nth-child(4) img{
+.blur-circle:nth-child(4) img {
      top: 10%;
      right: 20%;
 }
-
-
 
 .container {
      width: 100%;
@@ -72,7 +73,7 @@ body {
 .logo img {
      width: 100px;
      height: 100px;
-     scale: 2.1;
+     scale: 2;
 }
 
 .tagline {
@@ -84,6 +85,92 @@ body {
      height: 300px;
      scale: 1.2;
 }
+
+.card {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 5px;
+     z-index: 1;
+}
+
+.story {
+     position: relative;
+     width: 100%;
+     max-width: 280px;
+     background-color: #fff3f3;
+     height: 200px;
+     border-radius: 10px;
+     text-align: center;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+     display: none;
+     flex-direction: column;
+     padding: 20px;
+     overflow: hidden;
+}
+
+.story-wrapper {
+     position: absolute;
+     margin-top: 20px;
+     right: 5%;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: start;
+     background-image: url(./images/storyback.svg);
+     background-position: right;
+     background-repeat: no-repeat;
+     background-size: contain;
+}
+
+.story input {
+     border: none;
+     background: transparent;
+}
+
+.story input:focus {
+     outline: none;
+     border: none;
+}
+
+.story-btn {
+     position: absolute;
+     bottom: 20px;
+     left: 50%;
+     transform: translateX(-50%);
+     background-color: #F7BDBD;
+     padding: 10px;
+     width: 150px;
+     border: none;
+     color: #d50000;
+     border-radius: 10px;
+     cursor: pointer;
+}
+
+.form {
+     margin-top: 100px;
+     background: #ffffff;
+     height: 100%;
+     width: 300px;
+     padding: 50px 20px 80px 20px;
+     border-radius: 20px;
+}
+
+.details .form form{
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+}
+
+.details .form form input {
+     border: none;
+     background: #F1E8E8;
+     padding: 10px;
+     border-radius: 10px;
+}
+
 
 .btn {
      display: block;
@@ -113,4 +200,67 @@ body {
 .btn:active {
      transform: translateY(0);
      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Query for screens equal to or below 768px */
+@media screen and (max-width: 768px) {
+     .container {
+          max-width: 320px;
+          padding: 15px;
+     }
+
+     .logo {
+          height: 60px;
+     }
+
+     .logo img {
+          width: 80px;
+          height: 80px;
+          scale: 1.8;
+     }
+
+     .tagline {
+          height: 220px;
+     }
+
+     .tagline img {
+          width: 250px;
+          height: 250px;
+          scale: 1;
+     }
+
+     .btn {
+          max-width: 240px;
+          padding: 10px 16px;
+          font-size: 16px;
+     }
+
+     .blur-circle img {
+          width: 150px;
+          height: 150px;
+     }
+
+     .blur-circle:nth-child(1) img {
+          top: 0%;
+          left: -15%;
+          scale: 1.5;
+     }
+
+     .blur-circle:nth-child(2) img {
+          bottom: 25%;
+          left: 0%;
+          scale: 0.9;
+     }
+
+     .blur-circle:nth-child(3) img {
+          bottom: -50%;
+          right: -10%;
+          scale: 1.5;
+     }
+
+     .blur-circle:nth-child(4) img {
+          top: 25%;
+          right: -10%;
+          scale: 1;
+     }
 }

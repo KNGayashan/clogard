@@ -5,6 +5,7 @@
      <meta charset="UTF-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <title>Clogard</title>
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="/style.css" />
 </head>
 
@@ -26,10 +27,32 @@
                <img src="/images/home-mid.svg" alt="" />
           </div>
 
-          <a href="#" class="btn" data-lang="si">සිංහල</a>
-          <a href="#" class="btn" data-lang="en">English</a>
-          <a href="#" class="btn" data-lang="ta">தமிழ்</a>
+          <div class="card">
+               <a href="#" class="btn" data-lang="si">සිංහල</a>
+               <a href="#" class="btn" data-lang="en">English</a>
+               <a href="#" class="btn" data-lang="ta">தமிழ்</a>
+          </div>
+
+          <div class="story" style="display: none;">
+               <div class="story-wrapper"></div>
+               <input type="text" name="" id="" placeholder="ඔයාගේ කතාව විස්තර කරන්න">
+               <button class="story-btn">ඊළග</button>
+          </div>
+          
+          <div class="details" style="display: none;">                
+               <div class="form">
+                    <form action="">
+                         <input type="text" name="name" id="name" placeholder="ඔබගේ නම">
+                         <input type="number" name="contact" id="contact" placeholder="දුරකතන අංකය">
+                         <input type="email" name="email" id="email" placeholder="විද්‍යුත් ලිපිනය">
+                    </form>
+               </div>
+          </div>
+
      </div>
+
+     <script src="./app.js"></script>
 </body>
+
 
 </html>
